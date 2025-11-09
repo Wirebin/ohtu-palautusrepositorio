@@ -15,3 +15,12 @@ class PlayerReader:
       players.append(player)
 
     return players
+
+  def get_nationalities(self):
+    response = requests.get(self.url).json()
+    nats = []
+
+    for player in response:
+      if player['nationality'] not in nats:
+        nats.append(player['nationality'])
+    return sorted(nats)
