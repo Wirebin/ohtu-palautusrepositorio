@@ -2,3 +2,7 @@ __pycache__/
 .venv/
 .pytest_cache/
 htmlcov/
+log.*
+output.*
+report.*
+selenium*
